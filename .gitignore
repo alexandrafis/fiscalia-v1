@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+
+.env
+
+config/email_config.py
+
+backup_pages/
