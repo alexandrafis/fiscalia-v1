@@ -1,13 +1,13 @@
 import smtplib
+import streamlit as st
 
 from email.mime.text import MIMEText
 
-from config.email_config import (
-    SMTP_SERVER,
-    SMTP_PORT,
-    CORREO_REMITENTE,
-    CLAVE_CORREO
-)
+SMTP_SERVER = st.secrets["SMTP_SERVER"]
+SMTP_PORT = int(st.secrets["SMTP_PORT"])
+
+CORREO_REMITENTE = st.secrets["CORREO_REMITENTE"]
+CLAVE_CORREO = st.secrets["CLAVE_CORREO"]
 
 
 def enviar_correo(
